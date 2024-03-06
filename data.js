@@ -1,6 +1,6 @@
 
 const EXECUTORS_COUNT = 5;
-const DEBOUNCE_INTERVAL_IN_MS = 300;
+const DEBOUNCE_INTERVAL_IN_MS = 200;
 const names = [
   [
     'Денис',
@@ -109,8 +109,8 @@ const specializations = [
   'Эксперт в телефонах',
   'Самый быстрый курьер',
   'Представитель вашей фирмы',
-  'Наблюдатель',
-  'Агент под прикрытием'
+  'Автоэксперт',
+  'Частный детектив'
 ];
 const cities = document.querySelector('.js-cities');
 const executorsWrapper = document.querySelector('.js-executors');
@@ -164,7 +164,7 @@ const createExecutorTemplate = (cityId, i) => (
       <div class="card-body text-center">
         <h5 class="card-title">${names[Number(cityId)][i]}</h5>
         <div class="mb-3">${returnDeclination(getRandomInt(100, 500), 'завершенная сделка', 'завершенные сделки', 'завершенных сделок')}</div>
-        <div class="mb-3"><small class="bg-success-subtle px-2 rounded">${specializations[getRandomInt(0, returnDeclination.length - 1)]}</small></div>
+        <div class="mb-3"><small class="bg-success-subtle px-2 rounded">${specializations[i]}</small></div>
         <div class="verify d-flex align-items-center justify-content-center gap-1 mb-3">
           <small>Паспорт проверен</small>
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shield-fill-check" viewBox="0 0 16 16">
