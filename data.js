@@ -103,7 +103,14 @@ const images = [
     'https://40.img.avito.st/image/1/1.DLP5DLa4oFrPpWJf7QA1qfGuolxHrSJSj6iiWEmlqFBP.3mpjSV-VpEh1LQoaurb4n4O3VUNNmh1T_YydGi_ZQeI',
     'https://80.img.avito.st/image/1/1.fJOTU7a40Hql-hJ_5357oJjx0nwt8lJy5ffSeCP62HAl.aIlLScdMmz2oA0IPHEsxxsDP-Vg8Ph1IXMN4xnQ9Bos'
   ],
+];
 
+const specializations = [
+  'Эксперт в телефонах',
+  'Самый быстрый курьер',
+  'Представитель вашей фирмы',
+  'Наблюдатель',
+  'Агент под прикрытием'
 ];
 const cities = document.querySelector('.js-cities');
 const executorsWrapper = document.querySelector('.js-executors');
@@ -113,6 +120,20 @@ const getRandomInt = (min, max) => {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
+};
+
+const returnDeclination = (num, nominative, genitiveSingular, genitivePlural) => {
+  if (num > 10 && (Math.round((num % 100) / 10)) === 1) {
+    return `${num} ${genitivePlural}`;
+  } else {
+    switch (num % 10) {
+      case 1: return `<strong>${num}</strong> ${nominative}`;
+      case 2:
+      case 3:
+      case 4: return `<strong>${num}</strong> ${genitiveSingular}`;
+    }
+    return `<strong>${num}</strong> ${genitivePlural}`;
+  }
 };
 
 const debounce = (cb) => {
@@ -142,6 +163,8 @@ const createExecutorTemplate = (cityId, i) => (
       <div class="card-img"><img src="${images[Number(cityId)][i]}" class="card-img-top" alt="..."></div>
       <div class="card-body text-center">
         <h5 class="card-title">${names[Number(cityId)][i]}</h5>
+        <div class="mb-3">${returnDeclination(getRandomInt(100, 500), 'завершенная сделка', 'завершенные сделки', 'завершенных сделок')}</div>
+        <div class="mb-3"><small class="bg-success-subtle px-2 rounded">${specializations[getRandomInt(0, returnDeclination.length - 1)]}</small></div>
         <div class="verify d-flex align-items-center justify-content-center gap-1 mb-3">
           <small>Паспорт проверен</small>
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shield-fill-check" viewBox="0 0 16 16">
