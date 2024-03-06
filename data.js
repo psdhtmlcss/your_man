@@ -55,29 +55,29 @@ const names = [
 ];
 const images = [
   [
-    'https://10.img.avito.st/image/1/1.f7GP47a401i5VFFV_YIZ34ZB0V4xQlFOuU_RWj9K21I5.N7B0cvEDq67mx3tbSjL-yW7CPYNuC8cbeDEDyneXWG4',
-    'https://20.img.avito.st/image/1/1.YV6ypra4zbeEDw-y_NtderkEz7EMB0-_xALPtQIPxb0E.MvBb8T1Y6iyiv4RydPdMbZkbMts6oP2Q_k7hwW2_W_Y',
-    'https://70.img.avito.st/image/1/1.6jRZJba4Rt1vjITYAUbOf2yHRNvnhMTVL4FE3-mMTtfv.JXh-ZysEvu4KszD9Yx-vpd_kMlBrXN8EytpzLKZ5aac',
-    'https://20.img.avito.st/image/1/1.h3WGYLa4K5ywyemZhAruV4_CKZo4wamU8MQpnjbJI5Yw.cYax9SVXsVC0S4wATeRHa-bdc0C7pTBQf9GRQHhs3Tc',
-    'https://50.img.avito.st/image/1/1.WMN6Sba49CpM4DYvRlAm7WXr9izE6HYiDO32KMrg_CDM.snvokNDgfqVsypvXL_mWo0V_C4-9jXUFLLFg-IbdCBs',
+    'images/a01.jpg',
+    'images/a02.jpg',
+    'images/a03.jpg',
+    'images/a04.jpg',
+    'images/a05.jpg',
   ],
   [
-    'https://00.img.avito.st/image/1/1.7QtOrra4QeJ4B4PnGImHX2cMQ-TwD8PqOApD4P4HSej4.uK5osvirCY0kbK8WRF3spJ_ui48dg7wtHPsXUbcB304',
-    'https://40.img.avito.st/image/1/1.SOd9yba45A5LYCYLYdBumXJr5gjDaGYGC23mDM1g7ATL.9Jje-ox3VPztE-FRZZE_ftyJNQzAU1R5Bmv85g1reFw',
-    'https://20.img.avito.st/image/1/1.3tGoqba4cjieALA9mJbolYELcD4WCPAw3g1wOhgAejIe.cJo1EMuMZMBWU2IWGIQSBiDPC6SABuywJgd8kgM-PSE',
-    'https://20.img.avito.st/image/1/1.LCXunba4gMzYNELJupFXeuU_gspQPALEmDmCzl40iMZY.OyKrZgrSqU5YfSa-DTkpZ2OGoGya0A4sja5JIrfTl5E',
-    'https://50.img.avito.st/image/1/1.dUbWvLa42a_gFRuqsOVyOMIe26loHVunoBjbrWYV0aVg.fObwSTLQSd7Xm8_3QJ1Gz6tqGF3JEA297_syHvU-BLc',
+    'images/a06.jpg',
+    'images/a07.jpg',
+    'images/a08.jpg',
+    'images/a09.jpg',
+    'images/a10.jpg',
   ],
   [
-    'https://00.img.avito.st/image/1/1.Pg7SUra4kufk-1DiokJ-fOTwkOFs8xDvpPaQ5WL7mu1k.Ai-CcCmzSfKNs5x7nFBFPVR5_nLFJ7oBBUQR3pbkJFk',
-    'https://60.img.avito.st/image/1/1.TAwWXLa54OUg9SLgAilkV9v_5u-if-gnp__i4ar16uc.7nSkC_ISCUJkIvzVoF7vYzCnt3023KZ_uqK6QjxFYTk',
-    'https://10.img.avito.st/image/1/1.eCs7y7a41MINYhbHR5IyLDFp1sSFalbKTW_WwIti3MiN.nYQMg8jO0f_5KSr5w-mpINKZf-ZDDbKUVPm4ggZgzWo',
-    'https://70.img.avito.st/image/1/1.jzFGuLa4I9hwEeHdVI6DS00aId74GaHQMBwh2vYRK9Lw.WAZmbXeTXXJ-L5o_z3CYOkY1BN62oCMoyYzOn48-_dQ',
-    'https://10.img.avito.st/image/1/1.BgIrVLa4qusd_WjuK1wOPzz2qO2V9SjjXfCo6Zv9ouGd.wt0QBs7bc0TYmHPjyoFUCLpifwojs8bP8Cb6x2WHDl8',
+    'images/a11.jpg',
+    'images/a12.jpg',
+    'images/a13.jpg',
+    'images/a14.jpg',
+    'images/a15.jpg',
   ],
   [
     'images/01.jpg',
-    'https://90.img.avito.st/image/1/1.MnsyRba4npIE7FyXWjEdOTHnnJSM5ByaROGckILslpiE.V27xDLRbyFPzcI74Tol89x8UBjIXZCLQ7eYEEolyTYs',
+    'images/a16.jpg',
     'images/02.jpg',
     'images/03.jpg',
     'images/04.jpg'
@@ -100,8 +100,8 @@ const images = [
     'images/11.jpg',
     'images/10.jpg',
     'images/09.jpg',
-    'https://40.img.avito.st/image/1/1.DLP5DLa4oFrPpWJf7QA1qfGuolxHrSJSj6iiWEmlqFBP.3mpjSV-VpEh1LQoaurb4n4O3VUNNmh1T_YydGi_ZQeI',
-    'https://40.img.avito.st/image/1/1.OMmc3La1giCqexYm4KwapYl-liAidxYmqnuWIg.59jQmG6lNtG7D1tWhqxaTCckWx2WdvqWPC80CXZRyNY'
+    'images/a17.jpg',
+    'images/a18.jpg',
   ],
 ];
 
