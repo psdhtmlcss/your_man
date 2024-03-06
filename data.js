@@ -25,31 +25,31 @@ const names = [
   ],
   [
     'Денис',
-    'Андрей',
+    'Михаил',
     'Михаил',
     'Александр',
     'Данимар',
   ],
   [
+    'Андрей',
+    'Владислав',
+    'Станислав',
+    'Александр',
+    'Никита'
+  ],
+  [
     'Сергей',
-    'Антон',
-    'Игорь',
-    'Арсен',
+    'Дмитрий',
+    'Иван',
+    'Олег',
     'Виктор'
   ],
   [
     'Сергей',
-    'Антон',
-    'Игорь',
-    'Арсен',
-    'Виктор'
-  ],
-  [
-    'Сергей',
-    'Антон',
-    'Игорь',
-    'Арсен',
-    'Виктор'
+    'Владислав',
+    'Наталья',
+    'Кристина',
+    'Илья'
   ],
 
 ];
@@ -77,31 +77,31 @@ const images = [
   ],
   [
     'images/01.jpg',
-    'images/no-photo.jpg',
-    'images/no-photo.jpg',
-    'images/no-photo.jpg',
-    'images/no-photo.jpg'
+    'https://90.img.avito.st/image/1/1.MnsyRba4npIE7FyXWjEdOTHnnJSM5ByaROGckILslpiE.V27xDLRbyFPzcI74Tol89x8UBjIXZCLQ7eYEEolyTYs',
+    'images/02.jpg',
+    'images/03.jpg',
+    'images/04.jpg'
   ],
   [
-    'images/no-photo.jpg',
-    'images/no-photo.jpg',
-    'images/no-photo.jpg',
-    'images/no-photo.jpg',
-    'images/no-photo.jpg'
+    'images/05.jpg',
+    'images/06.jpg',
+    'images/08.jpg',
+    'images/18.jpg',
+    'images/17.jpg'
   ],
   [
-    'images/no-photo.jpg',
-    'images/no-photo.jpg',
-    'images/no-photo.jpg',
-    'images/no-photo.jpg',
-    'images/no-photo.jpg'
+    'images/07.jpg',
+    'images/16.jpg',
+    'images/15.jpg',
+    'images/14.jpg',
+    'images/12.jpg'
   ],
   [
-    'images/no-photo.jpg',
-    'images/no-photo.jpg',
-    'images/no-photo.jpg',
-    'images/no-photo.jpg',
-    'images/no-photo.jpg'
+    'images/11.jpg',
+    'images/10.jpg',
+    'images/09.jpg',
+    'https://40.img.avito.st/image/1/1.DLP5DLa4oFrPpWJf7QA1qfGuolxHrSJSj6iiWEmlqFBP.3mpjSV-VpEh1LQoaurb4n4O3VUNNmh1T_YydGi_ZQeI',
+    'https://80.img.avito.st/image/1/1.fJOTU7a40Hql-hJ_5357oJjx0nwt8lJy5ffSeCP62HAl.aIlLScdMmz2oA0IPHEsxxsDP-Vg8Ph1IXMN4xnQ9Bos'
   ],
 
 ];
