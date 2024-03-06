@@ -101,7 +101,7 @@ const images = [
     'images/10.jpg',
     'images/09.jpg',
     'https://40.img.avito.st/image/1/1.DLP5DLa4oFrPpWJf7QA1qfGuolxHrSJSj6iiWEmlqFBP.3mpjSV-VpEh1LQoaurb4n4O3VUNNmh1T_YydGi_ZQeI',
-    'https://80.img.avito.st/image/1/1.fJOTU7a40Hql-hJ_5357oJjx0nwt8lJy5ffSeCP62HAl.aIlLScdMmz2oA0IPHEsxxsDP-Vg8Ph1IXMN4xnQ9Bos'
+    'https://40.img.avito.st/image/1/1.OMmc3La1giCqexYm4KwapYl-liAidxYmqnuWIg.59jQmG6lNtG7D1tWhqxaTCckWx2WdvqWPC80CXZRyNY'
   ],
 ];
 
