@@ -124,7 +124,7 @@ const getRandomInt = (min, max) => {
 
 const returnDeclination = (num, nominative, genitiveSingular, genitivePlural) => {
   if (num > 10 && (Math.round((num % 100) / 10)) === 1) {
-    return `${num} ${genitivePlural}`;
+    return `<strong>${num}</strong> ${genitivePlural}`;
   } else {
     switch (num % 10) {
       case 1: return `<strong>${num}</strong> ${nominative}`;
