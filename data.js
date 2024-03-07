@@ -112,9 +112,12 @@ const specializations = [
   'Автоэксперт',
   'Частный детектив'
 ];
+
+const cityNames = ['#moscow', '#spb', '#krasnodar', '#irkutsk', '#tomsk', '#cheboksary', '#ivanovo'];
 const cities = document.querySelector('.js-cities');
 const executorsWrapper = document.querySelector('.js-executors');
 const loader = document.querySelector('.js-loader-wrapper');
+const url = new URL(window.location.href);
 
 const getRandomInt = (min, max) => {
   min = Math.ceil(min);
@@ -182,6 +185,37 @@ const renderExecutors = (cityId) => {
   for (let i = 0; i < EXECUTORS_COUNT; i++) {
     executorsWrapper.insertAdjacentHTML('beforeend', createExecutorTemplate(cityId, i));
   }
+};
+
+switch(url.hash) {
+  case cityNames[0]:
+    setActiveClass(document.querySelector('button[data-id="0"]'));
+    renderExecutors('0');
+    break;
+  case cityNames[1]:
+    setActiveClass(document.querySelector('button[data-id="1"]'));
+    renderExecutors('1');
+    break;
+  case cityNames[2]:
+    setActiveClass(document.querySelector('button[data-id="2"]'));
+    renderExecutors('2');
+    break;
+  case cityNames[3]:
+    setActiveClass(document.querySelector('button[data-id="3"]'));
+    renderExecutors('3');
+    break;
+  case cityNames[4]:
+    setActiveClass(document.querySelector('button[data-id="4"]'));
+    renderExecutors('4');
+    break;
+  case cityNames[5]:
+    setActiveClass(document.querySelector('button[data-id="5"]'));
+    renderExecutors('5');
+    break;
+  case cityNames[6]:
+    setActiveClass(document.querySelector('button[data-id="6"]'));
+    renderExecutors('6');
+    break;
 };
 
 const onCitiesClick = (evt) => {
