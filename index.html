@@ -6,7 +6,7 @@
   <title>Свой человек</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <style>
-    main > .container {
+    main {
       padding-top: 56px;
     }
 
@@ -58,7 +58,7 @@
     }
   </style>
   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  <script defer src="data.min.js"></script>
+  <script defer src="js.js"></script>
 </head>
 <body class="d-flex flex-column h-100">
   <!-- Yandex.Metrika counter -->
@@ -81,41 +81,86 @@
   <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <div class="container">
-        <a href="#" class="navbar-brand">PrieduPosmotru.ru</a>
-        <a href="registration.html" class="btn btn-primary">Для агентов</a>
+        <a href="#" class="navbar-brand">svoy-chelovek.ru</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">О проекте</a>
+            </li>
+            <li class="nav-item">
+              <a href="registration.html" class="nav-link">Вход</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
   </header>
   <main class="flex-shrink-0">
-    <section class="text-center container">
-      <div class="row py-5">
-        <div class="col-lg-6 col-md-8 mx-auto">
-          <h1 class="fw-light">Свой человек</h1>
-          <p class="lead text-body-secondary">Наши представители помогут обеспечить безопасную сделку на таких площадках как Авито, Юла или других классифайдов.</p>
-          <div class="collapse" id="collapseAbout">
-            <p class="lead text-body-secondary">Мы готовы выполнить ваши задачи с соблюдением всех необходимых мер безопасности, оказать помощь на месте, обеспечить защищенный осмотр объектов, приобрести необходимые детали или запчасти, а также выполнить различные поручения по вашему запросу.</p>
-            <p class="lead text-body-secondary">Наша цель - предоставить вам полный спектр безопасных услуг для эффективного и комфортного решения ваших задач.</p>
-            <p class="lead text-body-secondary">Каждый наш партнер прошел процедуру верификации в нашей организации, что гарантирует их надежность и профессионализм.</p>
+    <section class="py-3">
+      <div class="container">
+        <form>
+          <div class="mb-3">
+            <label class="form-label" for="citiesInput">Выберите город, где нужен свой человек:</label>
+            <input type="text" list="cities" id="citiesInput" class="form-control" placeholder="Начните вводить первые буквы либо выберите из списка">
+            <datalist id="cities">
+              <option value="Москва">
+              <option value="Санкт-Петербург">
+              <option value="Новосибирск">
+              <option value="Екатеринбург">
+              <option value="Казань">
+              <option value="Нижний Новгород">
+              <option value="Челябинск">
+              <option value="Красноярск">
+              <option value="Самара">
+              <option value="Уфа">
+              <option value="Ростов-на-Дону">
+              <option value="Омск">
+              <option value="Краснодар">
+              <option value="Воронеж">
+              <option value="Пермь">
+              <option value="Волгоград">
+              <option value="Саратов">
+              <option value="Тюмень">
+              <option value="Тольятти">
+              <option value="Барнаул">
+            </datalist>
           </div>
-          <p><a href="#collapseAbout" data-bs-toggle="collapse">Подробнее</a></p>
-        </div>
+          <div class="mb-3">
+            <label class="form-label">Выберите услугу:</label>
+            <select class="form-select js-specializations">
+              <option value="start" selected>--</option>
+              <option value="0">Проверить товар перед покупкой</option>
+              <option value="1">Курьер</option>
+              <option value="2">Представитель вашей фирмы</option>
+              <option value="3">Автоэксперт</option>
+              <option value="4">Частный детектив</option>
+            </select>
+          </div>
+        </form>
       </div>
     </section>
     <section>
-      <div class="container text-center cities js-cities">
-        <button type="button" class="btn btn-outline-secondary mb-1" data-id="0">Москва</button>
-        <button type="button" class="btn btn-outline-secondary mb-1" data-id="1">Санкт-Петербург</button>
-        <button type="button" class="btn btn-outline-secondary mb-1" data-id="2">Краснодар</button>
-        <button type="button" class="btn btn-outline-secondary mb-1" data-id="3">Иркутск</button>
-        <button type="button" class="btn btn-outline-secondary mb-1" data-id="4">Томск</button>
-        <button type="button" class="btn btn-outline-secondary mb-1" data-id="5">Чебоксары</button>
-        <button type="button" class="btn btn-outline-secondary mb-1" data-id="6">Иваново</button>
-      </div>
-    </section>
-    <section class="py-5">
       <div class="container">
+        <h2 class="js-heading mb-3"></h2>
         <div class="text-center js-loader-wrapper d-none"><span class="loader"></span></div>
         <div class="row js-executors"></div>
+      </div>
+    </section>
+    <section class="services">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">sfdasdfasdf</div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
