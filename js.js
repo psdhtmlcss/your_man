@@ -111,7 +111,7 @@ const specializations = [
 
 const createExecutorTemplate = (i, specialization) => (
   `<div class="col-md-3">
-    <div class="card mb-4">
+    <div class="card shadow-sm border-light-subtle bg-body-tertiary mb-4">
       <div class="card-img"><img src="${images[i]}" class="card-img-top" alt="..."></div>
       <div class="card-body text-center">
         <h5 class="card-title">${names[i]}</h5>

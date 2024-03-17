@@ -1,0 +1,78 @@
+.navbar.bg-dark {
+  background-color: #283236!important;
+}
+
+body {
+  color: #283236;
+}
+
+main {
+  padding-top: 58px;
+}
+
+.search {
+  background-color: #189acd;
+  color: white;
+}
+
+.search .form-control {
+  border: 0;
+}
+
+.executors .btn-primary {
+  background-color: #1481ad;
+}
+
+.card-img {
+  max-height: 180px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.card-img img {
+  max-height: 200px;
+  width: auto;
+}
+
+.verify svg path {
+  fill: var(--bs-success);
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid var(--bs-dark-bg-subtle);
+  border-bottom-color: var(--bs-danger);
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+.services .card {
+  border: 0;
+  background-color: var(--bs-light);
+  padding: 1rem;
+  height: calc(100% - 1rem);
+}
+
+@keyframes rotation {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
