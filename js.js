@@ -109,14 +109,14 @@ const specializations = [
   'Частный детектив'
 ];
 
-const createExecutorTemplate = (i, specialization) => (
+const createExecutorTemplate = (i) => (
   `<div class="col-md-3">
     <div class="card shadow-sm border-light-subtle bg-body-tertiary mb-4">
       <div class="card-img"><img src="${images[i]}" class="card-img-top" alt="..."></div>
       <div class="card-body text-center">
         <h5 class="card-title">${names[i]}</h5>
         <div class="mb-3">${returnDeclination(getRandomInt(100, 500), 'завершенная сделка', 'завершенные сделки', 'завершенных сделок')}</div>
-        <div class="mb-3"><small class="bg-success-subtle px-2 rounded">${specialization ? specialization : specializations[getRandomInt(0, specializations.length - 1)]}</small></div>
+        <div class="mb-3"><small class="bg-success-subtle px-2 rounded js-specialization">${specializations[getRandomInt(0, specializations.length - 1)]}</small></div>
         <div class="verify d-flex align-items-center justify-content-center gap-1 mb-3">
           <small>Паспорт проверен</small>
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shield-fill-check" viewBox="0 0 16 16">
@@ -131,10 +131,10 @@ const createExecutorTemplate = (i, specialization) => (
   </div>`
 );
 
-const renderExecutors = (specialization) => {
+const renderExecutors = () => {
   executorsWrapper.innerHTML = '';
   for (let i = 0; i < EXECUTORS_COUNT; i++) {
-    executorsWrapper.insertAdjacentHTML('beforeend', createExecutorTemplate(i, specialization));
+    executorsWrapper.insertAdjacentHTML('beforeend', createExecutorTemplate(i));
   }
 };
 
@@ -147,10 +147,24 @@ const renderHeading = (city) => {
 const onCitiesInputChange = (evt) => {
   const city = cities.find((city) => city.value === evt.target.value);
   if (!city) {
+    specializationsSelect.disabled = true;
+    specializationsSelect.options[0].selected = true;
     return;
   }
   heading.innerHTML = renderHeading(city.value);
   renderExecutors();
+  specializationsSelect.disabled = false;
+};
+
+const filterExecutors = (value) => {
+  const executors = document.querySelectorAll('.executors .card');
+  for (let i = 0; i < executors.length; i++) {
+    if (executors[i].querySelector('.js-specialization').textContent === value) {
+      executors[i].classList.remove('d-none');
+    } else {
+      executors[i].classList.add('d-none');
+    }
+  }
 };
 
 const onSpecializationsSelectChange = (evt) => {
@@ -158,7 +172,7 @@ const onSpecializationsSelectChange = (evt) => {
     return;
   }
 
-  renderExecutors(specializations[Number(evt.target.value)]);
+  filterExecutors(evt.target.options[evt.target.selectedIndex].text);
 };
 
 citiesInput.addEventListener('input', onCitiesInputChange);

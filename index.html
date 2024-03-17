@@ -48,49 +48,47 @@
     </nav>
   </header>
   <main class="flex-shrink-0">
-    <section class="py-3 mb-5 search">
+    <section class="py-3 mb-5 search shadow">
       <div class="container">
-        <form>
-          <div class="row">
-            <div class="mb-3 col-sm-12 col-md-6">
-              <label class="form-label" for="citiesInput">Выберите город, где нужен свой человек:</label>
-              <input type="text" list="cities" id="citiesInput" class="form-control" placeholder="Начните вводить первые буквы либо выберите из списка">
-              <datalist id="cities">
-                <option value="Москва">
-                <option value="Санкт-Петербург">
-                <option value="Новосибирск">
-                <option value="Екатеринбург">
-                <option value="Казань">
-                <option value="Нижний Новгород">
-                <option value="Челябинск">
-                <option value="Красноярск">
-                <option value="Самара">
-                <option value="Уфа">
-                <option value="Ростов-на-Дону">
-                <option value="Омск">
-                <option value="Краснодар">
-                <option value="Воронеж">
-                <option value="Пермь">
-                <option value="Волгоград">
-                <option value="Саратов">
-                <option value="Тюмень">
-                <option value="Тольятти">
-                <option value="Барнаул">
-              </datalist>
-            </div>
-            <div class="mb-3 col-sm-12 col-md-6">
-              <label class="form-label">Выберите услугу:</label>
-              <select class="form-select js-specializations">
-                <option value="start" selected>--</option>
-                <option value="0">Проверить товар перед покупкой</option>
-                <option value="1">Курьер</option>
-                <option value="2">Представитель вашей фирмы</option>
-                <option value="3">Автоэксперт</option>
-                <option value="4">Частный детектив</option>
-              </select>
-            </div>
+        <div class="row">
+          <div class="mb-3 col-sm-12 col-md-6">
+            <label class="form-label" for="citiesInput">Выберите город, где нужен свой человек:</label>
+            <input type="text" list="cities" id="citiesInput" class="form-control" placeholder="Начните вводить первые буквы либо выберите из списка">
+            <datalist id="cities">
+              <option value="Москва">
+              <option value="Санкт-Петербург">
+              <option value="Новосибирск">
+              <option value="Екатеринбург">
+              <option value="Казань">
+              <option value="Нижний Новгород">
+              <option value="Челябинск">
+              <option value="Красноярск">
+              <option value="Самара">
+              <option value="Уфа">
+              <option value="Ростов-на-Дону">
+              <option value="Омск">
+              <option value="Краснодар">
+              <option value="Воронеж">
+              <option value="Пермь">
+              <option value="Волгоград">
+              <option value="Саратов">
+              <option value="Тюмень">
+              <option value="Тольятти">
+              <option value="Барнаул">
+            </datalist>
           </div>
-        </form>
+          <div class="mb-3 col-sm-12 col-md-6">
+            <label class="form-label">Выберите услугу:</label>
+            <select class="form-select js-specializations" disabled>
+              <option value="start" selected>--</option>
+              <option value="0">Проверить товар перед покупкой</option>
+              <option value="1">Курьер</option>
+              <option value="2">Представитель вашей фирмы</option>
+              <option value="3">Автоэксперт</option>
+              <option value="4">Частный детектив</option>
+            </select>
+          </div>
+        </div>
       </div>
     </section>
     <section>
