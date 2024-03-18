@@ -110,7 +110,7 @@ const specializations = [
 ];
 
 const createExecutorTemplate = (i) => (
-  `<div class="col-md-3">
+  `<div class="col-lg-3 col-md-4 col-sm-2">
     <div class="card shadow-sm border-light-subtle bg-body-tertiary mb-4">
       <div class="card-img"><img src="${images[i]}" class="card-img-top" alt="..."></div>
       <div class="card-body text-center">
@@ -124,8 +124,11 @@ const createExecutorTemplate = (i) => (
           </svg>
         </div>
         <div class="price fw-bold mb-3">от 1000 рублей</div>
-        <a href="tel:89165371848" class="btn btn-primary d-block w-100 mb-2">Позвонить</a>
-        <a href="#" class="btn btn-outline-secondary d-block w-100">Написать сообщение</a>
+        <div class="phone d-none d-sm-block mb-2">
+          <strong style="cursor: pointer;" onclick="ym(96776081,'reachGoal','klikpozvonit')">+7 916 537 18 48</strong>
+        </div>
+        <a href="tel:89165371848" class="btn btn-primary d-block d-sm-none w-100 mb-2" onclick="ym(96776081,'reachGoal','klikpozvonit')">Позвонить</a>
+        <a href="#" onclick="ym(96776081,'reachGoal','napisatsoobshenie')" class="btn btn-outline-secondary d-block w-100">Написать сообщение</a>
       </div>
     </div>
   </div>`
@@ -160,9 +163,9 @@ const filterExecutors = (value) => {
   const executors = document.querySelectorAll('.executors .card');
   for (let i = 0; i < executors.length; i++) {
     if (executors[i].querySelector('.js-specialization').textContent === value) {
-      executors[i].classList.remove('d-none');
+      executors[i].parentElement.classList.remove('d-none');
     } else {
-      executors[i].classList.add('d-none');
+      executors[i].parentElement.classList.add('d-none');
     }
   }
 };
